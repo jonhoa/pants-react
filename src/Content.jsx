@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useState } from 'react';
 
 export function Content() {
-  const [pants, setPants] = useState => ([{
+  const [pants, setPants] = useState([{
     id: 1,
     name: "Pant",
     brief: "Something you wear"
@@ -13,7 +13,7 @@ export function Content() {
   return (
     <div>
       <ProductsNew />
-      <ProductsIndex pants = {pants} />
+      <ProductsIndex pants = {pants}/>
     </div>
   );
 }

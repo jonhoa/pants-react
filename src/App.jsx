@@ -1,14 +1,14 @@
 import { useState } from 'react'
+import { useEffect } from 'react';
+import axios from 'axios';
 import reactLogo from './assets/react.svg'
 import './App.css'
-
-function Header() {}
+import { Header } from './Header';
+import { Footer } from './Footer';
 
 function ProductsNew() {}
 
 function ProductsIndex() {}
-
-function Footer() {}
 
 function Content() {
   return (
@@ -23,7 +23,9 @@ function App() {
   return (
     <div>
       <Header />
+      <hr/>
       <Content />
+      <hr/>
       <Footer />
     </div>
   );

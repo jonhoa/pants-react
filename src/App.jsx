@@ -5,19 +5,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import { Header } from './Header';
 import { Footer } from './Footer';
-
-function ProductsNew() {}
-
-function ProductsIndex() {}
-
-function Content() {
-  return (
-    <div>
-      <ProductsNew />
-      <ProductsIndex />
-    </div>
-  );
-}
+import { Content } from './Content';
 
 function App() {
   return (

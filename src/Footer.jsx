@@ -4,5 +4,5 @@ export function Footer() {
       <p>Copyright @2023</p>
     </div>
   );
- }
+}
 

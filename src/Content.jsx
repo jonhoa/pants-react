@@ -2,6 +2,8 @@ import { PantsIndex } from './PantsIndex';
 import { PantsNew } from './PantsNew';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Routes, Route } from "react-router-dom";
+import { About } from "./About";
 
 export function Content() {
   const [pants, setPants] = useState([{
@@ -22,8 +24,12 @@ export function Content() {
 
   return (
     <div>
-      <PantsNew />
-      <PantsIndex pants = {pants}/>
+      <Routes>
+        <Route path="/about" element={<About />} />
+        <Route path="/pants/new" element={<PantsNew />} />
+        <Route path="/pants" element={<PantsIndex pants={pants}/>} />
+      </Routes>
+      
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import { Modal } from "./Modal";
+
 export function PantsIndex(props) { 
   console.log(props.pants);
 
@@ -18,6 +20,9 @@ const handleClick = () => {
         <p>Style: {pants.style}</p>
         <button type="submit" onClick={handleClick}>Learn more</button>
         <hr/>
+        <Modal show={true}>
+        <p>TEST</p>
+      </Modal>
       </div>
     ))
   );

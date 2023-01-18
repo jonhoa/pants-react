@@ -1,5 +1,5 @@
 import { PantsIndex } from './PantsIndex';
-import { PantsNew } from './PantsNew';
+import { PantsNew} from './PantsNew';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Routes, Route } from "react-router-dom";
@@ -22,14 +22,22 @@ export function Content() {
 
   useEffect(handleIndexPants, []);
 
+  const [isPostsShowVisible, setIsPostsShowVisible] = useState(false); 
+
+  const handleShowPost = () => {
+    setIsPostsShowVisible(true);
+  };
+
+  const handleHidePost = () => {
+    setIsPostsShowVisible(false);
+  };
   return (
     <div>
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/pants/new" element={<PantsNew />} />
-        <Route path="/pants" element={<PantsIndex pants={pants}/>} />
       </Routes>
-      
+      <PantsIndex pants={pants} onSelectPost = {handleShowPost}/>
     </div>
   );
 }

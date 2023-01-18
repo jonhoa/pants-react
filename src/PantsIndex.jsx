@@ -1,6 +1,12 @@
 export function PantsIndex(props) { 
   console.log(props.pants);
 
+const handleClick = () => {
+ console.log("test click");
+};
+
+// add modal here to prompt more info
+
   return (
     props.pants.map(pants => (
       <div key ={pants.id}>
@@ -10,7 +16,7 @@ export function PantsIndex(props) {
         <p>Waist: {pants.waist}</p>
         <p><img src={pants.image}/></p>
         <p>Style: {pants.style}</p>
-        <button type="submit">Learn more</button>
+        <button type="submit" onClick={handleClick}>Learn more</button>
         <hr/>
       </div>
     ))
